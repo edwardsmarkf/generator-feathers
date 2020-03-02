@@ -64,7 +64,6 @@ module.exports = class ConnectionGenerator extends Generator {
 
   _getConfiguration () {
     const sqlPackages = {
-      mysql: 'mysql2',
       mssql: 'mssql',
       postgres: 'pg',
       sqlite: 'sqlite3'
@@ -180,7 +179,7 @@ module.exports = class ConnectionGenerator extends Generator {
         name: 'database',
         message: 'Which database are you connecting to?',
         choices: [
-          { name: 'MySQL (MariaDB)', value: 'mysql' },
+          { name: 'MariaDB (MySQL)', value: 'mysql' },
           { name: 'PostgreSQL', value: 'postgres' },
           { name: 'SQLite', value: 'sqlite' },
           { name: 'SQL Server', value: 'mssql' }
